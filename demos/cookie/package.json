@@ -1,0 +1,15 @@
+{
+  "name": "cookie",
+  "version": "1.0.0",
+  "description": "cross domain cookie demo",
+  "main": "set-cookie.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

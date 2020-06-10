@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>set-cookie</title>
+</head>
+<body>
+  <button id="request1">axios-request-response-set-cookie</button>
+  <button id="request2">axios-request-with-cookie</button>
+  <button id="request3">jquery-request-response-set-cookie</button>
+  <button id="request4">jquery-request-with-cookie</button>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  $('#request1').click(function () {
+    axios.get('http://127.0.0.1:3000/setCookie').then((res)=>{
+      console.log(res.headers)
+      console.log('响应头已set-cookie')
+    })
+  })
+
+ $('#request2').click(function () {
+   console.log('浏览器存储的 cookie 为' + document.cookie);
+    axios.post('http://127.0.0.1:3000/sendCookie', {}, {withCredentials:true})
+  })
+
+  $('#request3').click(function () {
+    $.ajax({
+      url: 'http://127.0.0.1:3000/setCookie',
+      success: function (res,textStatus,jqXHR) {
+        console.log(jqXHR.getAllResponseHeaders())
+        console.log(jqXHR)
+        console.log('响应头已set-cookie')
+      }
+    })
+  })
+  $('#request4').click(function () {
+    $.ajax({
+      method: 'post',
+      url: 'http://127.0.0.1:3000/sendCookie',
+       xhrFields: {
+           withCredentials: true
+      },
+      // crossDomain: true,
+      success: function (res) {
+      
+      }
+    })
+  })
+</script>
+</html>
