@@ -7,4 +7,4 @@
 
 ### JavaScript
 
-[有趣的number.toString()]()
+[有趣的number.toString()](https://github.com/Yuanfang-fe/Blog-X/issues/2)
