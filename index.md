@@ -11,3 +11,7 @@
 ### JavaScript
 
 [有趣的number.toString()](https://github.com/Yuanfang-fe/Blog-X/issues/2)
+
+
+### App
+[web App vs Flutter vs native App 对比（利用revealjs做的ppt）](http://ppt.data-miracle.com/flutter.html)
