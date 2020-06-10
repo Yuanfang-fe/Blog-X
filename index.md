@@ -14,4 +14,4 @@
 
 
 ### App
-[web App vs Flutter vs native App 对比（利用revealjs做的ppt）](http://ppt.data-miracle.com/flutter.html)
+[Web App && Flutter && Native App 对比（利用revealjs做的ppt）](http://ppt.data-miracle.com/flutter.html)
