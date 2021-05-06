@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>intersectionObserver 懒加载</title>
+    <meta charset="UTF-8" />
+    <style>
+      img,
+      body,
+      ul,
+      li,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        height: 700px;
+        width: 100vw;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <ul>
+      <li>
+        <img
+          data-src="https://data-miracle.oss-cn-hangzhou.aliyuncs.com/images/1552965830717-min.jpg?x-oss-process=style/img"
+        />
+      </li>
+      <li>
+        <img
+          data-src="https://data-miracle.oss-cn-hangzhou.aliyuncs.com/images/1552966305507-min.jpg?x-oss-process=style/img"
+        />
+      </li>
+      <li>
+        <img
+          data-src="https://data-miracle.oss-cn-hangzhou.aliyuncs.com/images/1552966462915.jpg?x-oss-process=style/img"
+        />
+      </li>
+      <li>
+        <img
+          data-src="https://data-miracle.oss-cn-hangzhou.aliyuncs.com/images/1552973066949-min.jpg"
+        />
+      </li>
+      <li>
+        <img
+          data-src="https://data-miracle.oss-cn-hangzhou.aliyuncs.com/images/165139-min.jpg"
+        />
+      </li>
+      <li>
+        <img
+          data-src="https://data-miracle.oss-cn-hangzhou.aliyuncs.com/images/170935-min.jpg"
+        />
+      </li>
+      <li>
+        <img
+          data-src="https://data-miracle.oss-cn-hangzhou.aliyuncs.com/images/333372-min.jpg"
+        />
+      </li>
+    </ul>
+
+    <!-- 图片懒加载 -->
+    <script src="./lazy-load.js"></script>
+    <script>
+      let imgItems = [...document.querySelectorAll("img")];
+      window.lazyLoad = (images, options = {}) => {
+        return new LazyLoad(images, options);
+      };
+      
+      lazyLoad(imgItems);
+    </script>
+  </body>
+</html>
